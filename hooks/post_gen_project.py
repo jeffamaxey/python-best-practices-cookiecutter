@@ -3,7 +3,7 @@ import sys
 
 
 def set_python_version():
-    python_version = str(sys.version_info.major) + "." + str(sys.version_info.minor)
+    python_version = f"{str(sys.version_info.major)}.{str(sys.version_info.minor)}"
 
     file_names = ["Dockerfile", "Pipfile", ".github/workflows/test.yml"]
     for file_name in file_names:
@@ -21,7 +21,7 @@ TERMINATOR = "\x1b[0m"
 
 def main():
     set_python_version()
-    print(SUCCESS + "Project successfully initialized" + TERMINATOR)
+    print(f"{SUCCESS}Project successfully initialized{TERMINATOR}")
 
 
 if __name__ == "__main__":
